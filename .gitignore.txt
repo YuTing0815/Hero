@@ -1,0 +1,9 @@
+/HeroEmbelms.csproj
+/Libray
+/.vs
+/Temp
+/HeroEmbelms.Editor.csproj
+/HeroEmbelms.sln
+/KingStory.csproj
+/KingStory.Editor.csproj
+/KingStory.sln
