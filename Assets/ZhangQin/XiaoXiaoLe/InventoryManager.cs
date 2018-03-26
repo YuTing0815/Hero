@@ -32,18 +32,23 @@ public class InventoryManager:MonoBehaviour {
         can = GameObject.Find("Canvas").GetComponent<Canvas>();
         pickItem = GameObject.Find("Pickitem").GetComponent<ItemUI>();
         pickItem.Hide();//隐藏拖拽框
-        UpdateBag();
+       
     }
 
+    private void Start()
+    {
+        UpdateBag();
+    }
     public void UpdateBag()//查找当前已有的物品并显示在背包中
     {
         if (PacketModel.Instance.packetList ==new List<ItemIndex>()) { return; }
+        Debug.LogError(PacketModel.Instance.packetList.Count);
         //Debug.LogError("背包物品加载");
         foreach (var item in PacketModel.Instance.packetList)
         {
             for (int i = 0; i < item.num; i++)
             {
-               // Debug.LogError(item.itemId);
+                Debug.LogError(item.itemId);
                 Knapsack.Instance.StoreItem(item.itemId);
             }
         }  ;
@@ -168,7 +173,7 @@ public class InventoryManager:MonoBehaviour {
     }
     public Item GetItemById(int id)//传入id，返回物体信息
     {
-        Debug.LogError(id);
+       // Debug.LogError(id);
         foreach (Item item in itemList)
         {
             if (item.ID == id)

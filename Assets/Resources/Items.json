@@ -101,12 +101,14 @@
   {
     "id": 8,
     "name": "盾牌",
-    "type": "Weapon",
-    "quality": "Common",
-    "Description": "增加防御",
-    "Capacity": 10,
-    "BuyPrice": 20,
-    "SellPrice": 1,
-    "sprite": "Sprites/Items/shield"
+     "type": "Weapon",
+    "quality": "Legendary",
+    "Description": "削木如泥",
+    "Capacity": 1,
+    "BuyPrice": 30,
+    "SellPrice": 20,
+    "sprite": "Sprites/Items/shield",
+    "damage": 10,
+    "wpType": "MainHand"    
   }
 ]
